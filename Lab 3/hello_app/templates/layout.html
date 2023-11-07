@@ -6,9 +6,14 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
     </head>
 
+    <style>
+        button {text-align: center;}
+    </style>
+    
     <body>
         <div class="navbar">
             <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
+            <a href="{{ url_for('tictactoe') }}" class="navbar-item">Tic Tac Toe</a>
             <a href="{{ url_for('about') }}" class="navbar-item">About</a>
             <a href="{{ url_for('contact') }}" class="navbar-item">Contact</a>
         </div>

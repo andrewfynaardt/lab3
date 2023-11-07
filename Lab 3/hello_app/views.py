@@ -3,6 +3,7 @@ from flask import render_template
 from datetime import datetime
 from . import app
 
+
 @app.route("/")
 def home():
     return render_template("home.html")
@@ -27,3 +28,7 @@ def hello_there(name = None):
 @app.route("/api/data")
 def get_data():
     return app.send_static_file("data.json")
+
+@app.route("/tictactoe")
+def tictactoe():
+    return render_template("tictactoe.html")
